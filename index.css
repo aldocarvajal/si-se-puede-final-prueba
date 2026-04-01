@@ -312,3 +312,32 @@
     font-size: 12px;
   }
 }
+
+
+
+
+@media (max-width: 768px) {
+  .carousel {
+    height: auto !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: none !important;
+  }
+
+  .slides {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .slides img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    background: #000; /* fondo negro detrás de cada foto */
+    display: block;
+  }
+}
+.carousel {
+  margin-bottom: 0 !important;
+}
