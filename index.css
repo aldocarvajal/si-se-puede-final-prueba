@@ -314,28 +314,26 @@
 }
 
 
-
-
 @media (max-width: 768px) {
   .carousel {
     height: auto !important;
-    min-height: 0 !important;
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
     background: none !important;
   }
 
   .slides {
+    display: block !important;   /* ← en móvil ya no es flex horizontal */
     width: 100% !important;
     height: auto !important;
-    animation: none !important; /* ← clave: desactiva animación en móvil */
+    animation: none !important;  /* ← sin animación */
   }
 
   .slides img {
     width: 100%;
     height: auto;
     object-fit: contain;
-    background: #000; /* fondo negro detrás de cada foto */
+    background: #000;
     display: block;
   }
 }
