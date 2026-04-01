@@ -80,11 +80,13 @@
 .main-nav.active {
   display: block;
 }
+
+/* Carrusel */
 .carousel {
   width: 100%;
   position: relative;
   overflow: hidden;
-  background: #000;
+  background: transparent; /* corregido: antes estaba negro */
 }
 
 .slides {
@@ -96,9 +98,9 @@
 
 .slides img {
   flex: 0 0 100%;
-  width: 100%;          /* ocupa todo el ancho */
-  height: auto;         /* altura automática */
-  object-fit: contain;  /* muestra la imagen completa */
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* muestra la imagen completa */
 }
 
 /* Animación */
@@ -113,21 +115,23 @@
   95%  { transform: translateX(-300%); }
   100% { transform: translateX(0%); }
 }
+
+/* Menú hamburguesa */
 .hamburger-menu {
-  position: fixed;          /* fijo en pantalla */
+  position: fixed;
   top: 0;
-  right: 0;                 /* anclado al borde derecho */
-  width: 250px;             /* ancho de la barra lateral */
-  height: 100%;             /* ocupa toda la altura */
+  right: 0;
+  width: 250px;
+  height: 100%;
   background-color: #b70000;
   padding: 20px;
-  transform: translateX(100%);   /* oculto totalmente fuera de la pantalla */
-  transition: transform 0.3s ease; /* animación suave */
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
   z-index: 10000;
 }
 
 .hamburger-menu.active {
-  transform: translateX(0);      /* se despliega hacia la izquierda */
+  transform: translateX(0);
 }
 
 .hamburger-menu ul {
@@ -162,18 +166,13 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.5); /* oscurece el fondo */
+  background: rgba(0,0,0,0.5);
   z-index: 9999;
 }
 
 .overlay.active {
   display: block;
 }
-
-
-
-
-
 
 /* Responsivo para pantallas pequeñas */
 @media (max-width: 768px) {
@@ -197,62 +196,55 @@
   }
 
   .main-nav {
-    display: none; /* ocultamos menú principal en móvil */
+    display: none;
   }
-
 
   .hamburger-menu {
-    width: 80%; /* ocupa más espacio en móvil */
-  }
-}
-@media (min-width: 769px) {
-  .carousel {
-    height: 80vh;              /* grande en PC */
+    width: 80%;
   }
 
-  .slides img {
-    height: 100%;
-    object-fit: cover;         /* llena el espacio */
-  }
-}
-
-@media (max-width: 768px) {
   .carousel {
-    height: auto;              /* se ajusta al contenido en móvil */
+    height: auto; /* corregido: se ajusta al contenido */
   }
 
   .slides img {
     width: 100%;
     height: auto;
-    object-fit: contain;       /* no corta la imagen */
+    object-fit: contain;
   }
 }
 
+/* Carrusel en escritorio */
+@media (min-width: 769px) {
+  .carousel {
+    height: 80vh;
+  }
 
+  .slides img {
+    height: 100%;
+    object-fit: cover;
+  }
+}
 
-
-
-
+/* Botones grandes */
 .full-width-buttons {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* cuatro columnas iguales */
+  grid-template-columns: repeat(4, 1fr);
   width: 100%;
 }
 
 .full-width-buttons .btn {
   display: flex;
-  flex-direction: column;   /* título arriba, subtítulo abajo */
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 110px;            /* altura más angosta */
+  height: 110px; /* altura ajustada */
   text-decoration: none;
   color: white;
   font-family: Arial, sans-serif;
   padding: 10px;
 }
 
-
-/* Título grande */
 .btn-title {
   font-size: 22px;
   font-weight: bold;
@@ -260,12 +252,11 @@
   text-align: center;
 }
 
-/* Subtítulo más pequeño */
 .btn-subtitle {
   font-size: 14px;
   font-weight: normal;
   text-align: center;
-  opacity: 0.9; /* un poco más claro para diferenciar */
+  opacity: 0.9;
 }
 
 /* Colores */
@@ -296,9 +287,15 @@
 .btn-green:hover {
   background-color: #00A31E;
 }
+
+/* Responsivo botones */
 @media (max-width: 768px) {
+  .full-width-buttons {
+    grid-template-columns: 1fr;
+  }
+
   .full-width-buttons .btn {
-    height: 90px;   /* más compactos en móvil */
+    height: 90px;
   }
 
   .btn-title {
@@ -309,8 +306,3 @@
     font-size: 12px;
   }
 }
-
-
-
-
-
