@@ -200,9 +200,6 @@
     display: none; /* ocultamos menú principal en móvil */
   }
 
-  .carousel {
-    height: 50vh; /* más pequeño en móvil */
-  }
 
   .hamburger-menu {
     width: 80%; /* ocupa más espacio en móvil */
@@ -230,6 +227,7 @@
     object-fit: contain;       /* no corta la imagen */
   }
 }
+
 
 
 
