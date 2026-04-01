@@ -18,4 +18,12 @@ document.addEventListener("DOMContentLoaded", () => {
     hamburgerMenu.classList.remove("active");
     overlay.classList.remove("active");
   });
+
+  // Cerrar con tecla ESC
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      hamburgerMenu.classList.remove("active");
+      overlay.classList.remove("active");
+    }
+  });
 });

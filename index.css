@@ -119,17 +119,18 @@
 .hamburger-menu {
   position: fixed;          /* fijo en pantalla */
   top: 0;
-  right: -250px;            /* oculto fuera de la pantalla */
+  right: 0;                 /* anclado al borde derecho */
   width: 250px;             /* ancho de la barra lateral */
   height: 100%;             /* ocupa toda la altura */
   background-color: #b70000;
   padding: 20px;
-  transition: right 0.3s ease; /* animación suave */
-  z-index: 9999;
+  transform: translateX(100%);   /* oculto totalmente fuera de la pantalla */
+  transition: transform 0.3s ease; /* animación suave */
+  z-index: 10000;
 }
 
 .hamburger-menu.active {
-  right: 0;                 /* se despliega hacia la izquierda */
+  transform: translateX(0);      /* se despliega hacia la izquierda */
 }
 
 .hamburger-menu ul {
@@ -155,6 +156,7 @@
 .hamburger-menu ul li a:hover {
   background-color: #8a0000;
 }
+
 /* Overlay detrás del menú */
 .overlay {
   display: none;
@@ -169,4 +171,39 @@
 
 .overlay.active {
   display: block;
+}
+
+
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+  .main-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
+
+  .logo {
+    height: 60px;
+    margin-bottom: 10px;
+  }
+
+  .header-text h1 {
+    font-size: 20px;
+  }
+
+  .header-text p {
+    font-size: 14px;
+  }
+
+  .main-nav {
+    display: none; /* ocultamos menú principal en móvil */
+  }
+
+  .carousel {
+    height: 50vh; /* más pequeño en móvil */
+  }
+
+  .hamburger-menu {
+    width: 80%; /* ocupa más espacio en móvil */
+  }
 }
