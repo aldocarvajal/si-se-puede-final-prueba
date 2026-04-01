@@ -91,7 +91,7 @@
 .slides {
   display: flex;
   flex-wrap: nowrap;
-  width: 400%; /* ajusta según el número de imágenes */
+  width: 100%;
   animation: slide 16s infinite;
 }
 
@@ -100,7 +100,6 @@
   width: 100%;
   height: auto;
   display: block;
-  background: #000; /* fondo negro detrás de cada foto */
 }
 
 /* Animación */
@@ -205,17 +204,18 @@
 
   .carousel {
     height: auto; /* se ajusta al contenido */
-    min-height: auto;
+    background: none; /* elimina fondo negro en móvil */
   }
 
   .slides {
-    width: 100%; /* no reserves más ancho del necesario */
+    width: 100%;
   }
 
   .slides img {
     width: 100%;
     height: auto;
     object-fit: contain;
+    background: #000; /* fondo negro solo detrás de la foto */
   }
 }
 
