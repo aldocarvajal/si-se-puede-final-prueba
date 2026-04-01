@@ -320,8 +320,8 @@
   .carousel {
     height: auto !important;
     min-height: 0 !important;
-    margin: 0 !important;
-    padding: 0 !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
     background: none !important;
   }
 
