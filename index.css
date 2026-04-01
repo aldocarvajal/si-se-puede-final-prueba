@@ -207,3 +207,24 @@
     width: 80%; /* ocupa más espacio en móvil */
   }
 }
+@media (max-width: 768px) {
+  .carousel {
+    height: 50vh;              /* más compacto en móvil */
+  }
+
+  .slides img {
+    width: 100%;               /* cada imagen ocupa todo el ancho */
+    height: auto;              /* ajusta la altura automáticamente */
+    object-fit: cover;         /* mantiene proporción sin deformarse */
+  }
+}
+@media (max-width: 768px) {
+  .main-header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+}
+
+
+
