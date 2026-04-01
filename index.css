@@ -322,13 +322,10 @@
     background: none !important;
   }
 
-  .slides {
+ .slides {
     display: block !important;   /* ← ya no es flex horizontal */
-    width: 100% !important;
-    height: auto !important;
     animation: none !important;  /* ← sin animación */
   }
-
   .slides img {
     width: 100%;
     height: auto;
