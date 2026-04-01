@@ -323,7 +323,7 @@
   }
 
   .slides {
-    display: block !important;   /* ← en móvil ya no es flex horizontal */
+    display: block !important;   /* ← ya no es flex horizontal */
     width: 100% !important;
     height: auto !important;
     animation: none !important;  /* ← sin animación */
