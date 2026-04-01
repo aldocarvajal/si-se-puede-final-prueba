@@ -203,19 +203,20 @@
   }
 
   .carousel {
-    height: auto; /* se ajusta al contenido */
-    background: none; /* elimina fondo negro en móvil */
+    height: auto !important;   /* se ajusta al contenido */
+    background: none !important;
   }
 
   .slides {
-    width: 100%;
+    width: 100% !important;
   }
 
   .slides img {
     width: 100%;
     height: auto;
     object-fit: contain;
-    background: #000; /* fondo negro solo detrás de la foto */
+    background: #000; /* fondo negro detrás de cada foto */
+    display: block;
   }
 }
 
@@ -227,7 +228,7 @@
 
   .slides img {
     height: 100%;
-    object-fit: cover;
+    object-fit: contain; /* ← cambiado: muestra la foto completa sin zoom */
   }
 }
 
