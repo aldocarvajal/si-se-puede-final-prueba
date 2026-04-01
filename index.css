@@ -171,6 +171,10 @@
 }
 
 
+
+
+
+
 /* Responsivo para pantallas pequeñas */
 @media (max-width: 768px) {
   .main-header {
@@ -226,6 +230,88 @@
     object-fit: contain;       /* no corta la imagen */
   }
 }
+
+
+
+
+
+.full-width-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* cuatro columnas iguales */
+  width: 100%;
+}
+
+.full-width-buttons .btn {
+  display: flex;
+  flex-direction: column;   /* título arriba, subtítulo abajo */
+  justify-content: center;
+  align-items: center;
+  height: 110px;            /* altura más angosta */
+  text-decoration: none;
+  color: white;
+  font-family: Arial, sans-serif;
+  padding: 10px;
+}
+
+
+/* Título grande */
+.btn-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 6px;
+  text-align: center;
+}
+
+/* Subtítulo más pequeño */
+.btn-subtitle {
+  font-size: 14px;
+  font-weight: normal;
+  text-align: center;
+  opacity: 0.9; /* un poco más claro para diferenciar */
+}
+
+/* Colores */
+.btn-blue {
+  background-color: #000BA3;
+}
+.btn-blue:hover {
+  background-color: #000875;
+}
+
+.btn-gray {
+  background-color: #6c757d;
+}
+.btn-gray:hover {
+  background-color: #4a4e52;
+}
+
+.btn-red {
+  background-color: #b70000;
+}
+.btn-red:hover {
+  background-color: #A30000;
+}
+
+.btn-green {
+  background-color: #00D126;
+}
+.btn-green:hover {
+  background-color: #00A31E;
+}
+@media (max-width: 768px) {
+  .full-width-buttons .btn {
+    height: 90px;   /* más compactos en móvil */
+  }
+
+  .btn-title {
+    font-size: 18px;
+  }
+
+  .btn-subtitle {
+    font-size: 12px;
+  }
+}
+
 
 
 
